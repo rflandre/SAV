@@ -1,0 +1,428 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Rexel",
+    "x-lastModified": "Jan 11, 2017 13:25PM PST"
+  },
+  "paths": {
+    "/stockandprice/{idProduct}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/StockANdprice"
+            },
+            "examples": {
+              "application/json": {
+                "idCustomer": "2155682",
+                "productDetails": [
+                  {
+                    "stockInquiryCentre": "",
+                    "availabilityAgence": "",
+                    "zipCode": "0",
+                    "countryCode": "",
+                    "idProduct": "60000626",
+                    "itemCommercialReference": "LEG031913",
+                    "itemLabel": "COLSON NOIR 9X185",
+                    "clientBasePrice": 0.24322,
+                    "clientNetPrice": 0.1508,
+                    "hasD3E": false,
+                    "D3ERef": "",
+                    "D3EDesignation": "",
+                    "D3EQuantity": 0,
+                    "D3ECost": 0,
+                    "DCAvailabiltyInfos": true,
+                    "availableCLRStock": 23500,
+                    "nationalStockManagement": false,
+                    "availableNationalStock": 0,
+                    "DCCode": "4420",
+                    "salesAgreement": "",
+                    "nationalStockMinimumSales": 100,
+                    "nationalStockSalesFactor": 100,
+                    "DCMinimumQuantity": 100,
+                    "DCMultipleQuantity": 100,
+                    "isNotReferenced": false,
+                    "isCEECompliant": false,
+                    "isReflexCompliant": false,
+                    "availableBranchStock": 0,
+                    "branchMultipleQuantity": 100,
+                    "isCommercialAnimationCompliant": true,
+                    "FGASProduct": false,
+                    "pointsAwardedOnProduct": 0,
+                    "commercialOperationLabel": "",
+                    "commercialOperationDetailsUrl": "",
+                    "DCAvailabiltyDelay": 1,
+                    "DCDeliveryInfos": "en stock. Livré en 24h."
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "idCodOrigin",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "idNumVersion",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "idCustomer",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "idProduct",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "GiveNewSchemaNameHere": {
+      "type": "object",
+      "properties": {
+        "idCustomer": {
+          "type": "string",
+          "default": "2155682"
+        },
+        "productDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stockInquiryCentre": {
+                "type": "string",
+                "default": ""
+              },
+              "availabilityAgence": {
+                "type": "string",
+                "default": ""
+              },
+              "zipCode": {
+                "type": "string",
+                "default": "0"
+              },
+              "countryCode": {
+                "type": "string",
+                "default": ""
+              },
+              "idProduct": {
+                "type": "string",
+                "default": "60000626"
+              },
+              "itemCommercialReference": {
+                "type": "string",
+                "default": "LEG031913"
+              },
+              "itemLabel": {
+                "type": "string",
+                "default": "COLSON NOIR 9X185"
+              },
+              "clientBasePrice": {
+                "type": "number",
+                "default": 0.24322
+              },
+              "clientNetPrice": {
+                "type": "number",
+                "default": 0.1508
+              },
+              "hasD3E": {
+                "type": "boolean",
+                "default": false
+              },
+              "D3ERef": {
+                "type": "string",
+                "default": ""
+              },
+              "D3EDesignation": {
+                "type": "string",
+                "default": ""
+              },
+              "D3EQuantity": {
+                "type": "integer",
+                "default": 0
+              },
+              "D3ECost": {
+                "type": "integer",
+                "default": 0
+              },
+              "DCAvailabiltyInfos": {
+                "type": "boolean",
+                "default": true
+              },
+              "availableCLRStock": {
+                "type": "integer",
+                "default": 23500
+              },
+              "nationalStockManagement": {
+                "type": "boolean",
+                "default": false
+              },
+              "availableNationalStock": {
+                "type": "integer",
+                "default": 0
+              },
+              "DCCode": {
+                "type": "string",
+                "default": "4420"
+              },
+              "salesAgreement": {
+                "type": "string",
+                "default": ""
+              },
+              "nationalStockMinimumSales": {
+                "type": "integer",
+                "default": 100
+              },
+              "nationalStockSalesFactor": {
+                "type": "integer",
+                "default": 100
+              },
+              "DCMinimumQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "DCMultipleQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "isNotReferenced": {
+                "type": "boolean",
+                "default": false
+              },
+              "isCEECompliant": {
+                "type": "boolean",
+                "default": false
+              },
+              "isReflexCompliant": {
+                "type": "boolean",
+                "default": false
+              },
+              "availableBranchStock": {
+                "type": "integer",
+                "default": 0
+              },
+              "branchMultipleQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "isCommercialAnimationCompliant": {
+                "type": "boolean",
+                "default": true
+              },
+              "FGASProduct": {
+                "type": "boolean",
+                "default": false
+              },
+              "pointsAwardedOnProduct": {
+                "type": "integer",
+                "default": 0
+              },
+              "commercialOperationLabel": {
+                "type": "string",
+                "default": ""
+              },
+              "commercialOperationDetailsUrl": {
+                "type": "string",
+                "default": ""
+              },
+              "DCAvailabiltyDelay": {
+                "type": "integer",
+                "default": 1
+              },
+              "DCDeliveryInfos": {
+                "type": "string",
+                "default": "en stock. Livré en 24h."
+              }
+            }
+          }
+        }
+      }
+    },
+    "StockANdprice": {
+      "type": "object",
+      "properties": {
+        "idCustomer": {
+          "type": "string",
+          "default": "2155682"
+        },
+        "productDetails": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "stockInquiryCentre": {
+                "type": "string",
+                "default": ""
+              },
+              "availabilityAgence": {
+                "type": "string",
+                "default": ""
+              },
+              "zipCode": {
+                "type": "string",
+                "default": "0"
+              },
+              "countryCode": {
+                "type": "string",
+                "default": ""
+              },
+              "idProduct": {
+                "type": "string",
+                "default": "60000626"
+              },
+              "itemCommercialReference": {
+                "type": "string",
+                "default": "LEG031913"
+              },
+              "itemLabel": {
+                "type": "string",
+                "default": "COLSON NOIR 9X185"
+              },
+              "clientBasePrice": {
+                "type": "number",
+                "default": 0.24322
+              },
+              "clientNetPrice": {
+                "type": "number",
+                "default": 0.1508
+              },
+              "hasD3E": {
+                "type": "boolean",
+                "default": false
+              },
+              "D3ERef": {
+                "type": "string",
+                "default": ""
+              },
+              "D3EDesignation": {
+                "type": "string",
+                "default": ""
+              },
+              "D3EQuantity": {
+                "type": "integer",
+                "default": 0
+              },
+              "D3ECost": {
+                "type": "integer",
+                "default": 0
+              },
+              "DCAvailabiltyInfos": {
+                "type": "boolean",
+                "default": true
+              },
+              "availableCLRStock": {
+                "type": "integer",
+                "default": 23500
+              },
+              "nationalStockManagement": {
+                "type": "boolean",
+                "default": false
+              },
+              "availableNationalStock": {
+                "type": "integer",
+                "default": 0
+              },
+              "DCCode": {
+                "type": "string",
+                "default": "4420"
+              },
+              "salesAgreement": {
+                "type": "string",
+                "default": ""
+              },
+              "nationalStockMinimumSales": {
+                "type": "integer",
+                "default": 100
+              },
+              "nationalStockSalesFactor": {
+                "type": "integer",
+                "default": 100
+              },
+              "DCMinimumQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "DCMultipleQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "isNotReferenced": {
+                "type": "boolean",
+                "default": false
+              },
+              "isCEECompliant": {
+                "type": "boolean",
+                "default": false
+              },
+              "isReflexCompliant": {
+                "type": "boolean",
+                "default": false
+              },
+              "availableBranchStock": {
+                "type": "integer",
+                "default": 0
+              },
+              "branchMultipleQuantity": {
+                "type": "integer",
+                "default": 100
+              },
+              "isCommercialAnimationCompliant": {
+                "type": "boolean",
+                "default": true
+              },
+              "FGASProduct": {
+                "type": "boolean",
+                "default": false
+              },
+              "pointsAwardedOnProduct": {
+                "type": "integer",
+                "default": 0
+              },
+              "commercialOperationLabel": {
+                "type": "string",
+                "default": ""
+              },
+              "commercialOperationDetailsUrl": {
+                "type": "string",
+                "default": ""
+              },
+              "DCAvailabiltyDelay": {
+                "type": "integer",
+                "default": 1
+              },
+              "DCDeliveryInfos": {
+                "type": "string",
+                "default": "en stock. Livré en 24h."
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
