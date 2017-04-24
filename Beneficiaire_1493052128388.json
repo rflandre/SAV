@@ -1,0 +1,106 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Beneficiaire",
+    "x-lastModified": "Sep 21, 2016 04:57AM PST"
+  },
+  "paths": {
+    "/beneficiaire/{user}/{application}": {
+      "get": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "$ref": "#/definitions/test"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "CodeBeneficiaire",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "CodeFinance",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "CodeProduit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "user",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "application",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      },
+      "post": {
+        "produces": [
+          "application/json",
+          "application/xml"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "application",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      }
+    }
+  },
+  "definitions": {
+    "test": {
+      "Name": "String",
+      "Lastname": "String"
+    }
+  }
+}
