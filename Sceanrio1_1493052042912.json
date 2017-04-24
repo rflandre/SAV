@@ -1,0 +1,163 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "Sceanrio1",
+    "x-lastModified": "Sep 09, 2016 06:00AM PST"
+  },
+  "paths": {
+    "/detailsBeneficiaire/{user}/{application}": {
+      "get": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "application/json": "{\n  \"enteteTechnique\": {\n    \"blockingError\": false\n  },\n  \"donneesOutput\": {\n    \"raisonSociale\": \"PARTOUCHE PRODUCTION\",\n    \"informationsBeneficiaire\": {\n      \"numeroFourniBeneficiaire\": \"\",\n      \"numeroMatricule\": \"B254\",\n      \"civilite\": \"000000065\",\n      \"nomBeneficiaire\": \"B_NOM_MOAD254\",\n      \"prenomBeneficiaire\": \"B_PRENOM_MOAD254\",\n      \"IDProfil\": \"000000004\",\n      \"adresseLigne1\": \"B_1 rue des fleurs 254\",\n      \"adresseLigne2\": \"\",\n      \"adresseLigne3\": \"92230\",\n      \"adresseLigne4\": \"GENNEVILLIERS\"\n    },\n    \"verouillageBeneficiare\": false,\n    \"BeneficiaireActif\": true,\n    \"numeroCompteMoveUp\": \"00000001234\",\n    \"IDSiteDistribution\": \"000306298\"\n  }\n}"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "CodeBenef",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "CodeFinance",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "CodeProduit",
+            "in": "query",
+            "description": "",
+            "required": false,
+            "type": "string",
+            "format": "",
+            "default": ""
+          },
+          {
+            "name": "user",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "application",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      },
+      "post": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response",
+            "schema": {
+              "type": "string"
+            },
+            "examples": {
+              "application/json": "{\n  \"enteteTechnique\": {\n    \"blockingError\": false\n  },\n  \"donneesOutput\": {\n    \"raisonSociale\": \"PARTOUCHE PRODUCTION\",\n    \"informationsBeneficiaire\": {\n      \"numeroFourniBeneficiaire\": \"\",\n      \"numeroMatricule\": \"B254\",\n      \"civilite\": \"000000065\",\n      \"nomBeneficiaire\": \"B_NOM_MOAD254\",\n      \"prenomBeneficiaire\": \"B_PRENOM_MOAD254\",\n      \"IDProfil\": \"000000004\",\n      \"adresseLigne1\": \"B_1 rue des fleurs 254\",\n      \"adresseLigne2\": \"\",\n      \"adresseLigne3\": \"92230\",\n      \"adresseLigne4\": \"GENNEVILLIERS\"\n    },\n    \"verouillageBeneficiare\": false,\n    \"BeneficiaireActif\": true,\n    \"numeroCompteMoveUp\": \"00000001234\",\n    \"IDSiteDistribution\": \"000306298\"\n  }\n}"
+            }
+          }
+        },
+        "parameters": [
+          {
+            "name": "user",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "application",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          }
+        ]
+      },
+      "put": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "name": "user"
+          },
+          {
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "name": "application"
+          }
+        ]
+      },
+      "delete": {
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Success response"
+          }
+        },
+        "parameters": [
+          {
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "name": "user"
+          },
+          {
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": "",
+            "name": "application"
+          }
+        ]
+      }
+    }
+  }
+}
