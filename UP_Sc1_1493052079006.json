@@ -1,0 +1,276 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "UP_Sc1",
+    "description": "Summary about the new REST service.",
+    "x-lastModified": "Sep 01, 2016 07:22AM PST"
+  },
+  "host": "localhost:6560",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/beneficiaire/{User}/{Application}/": {
+      "post": {
+        "description": "",
+        "operationId": "post-beneficiaire",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "User",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "Application",
+            "in": "path",
+            "description": "",
+            "required": true,
+            "type": "string",
+            "format": ""
+          },
+          {
+            "name": "body",
+            "in": "body",
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/getDetailsBeneficiaireReq"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "a getDetailsBeneficiaireResp to be returned",
+            "schema": {
+              "$ref": "#/definitions/getDetailsBeneficiaireResp"
+            }
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "operationId": "get-beneficiaire",
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "User",
+            "in": "path",
+            "description": "",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "codeFinance",
+            "in": "query",
+            "description": "",
+            "type": "string",
+            "required": false
+          },
+          {
+            "name": "codeBeneficiaire",
+            "in": "query",
+            "description": "",
+            "type": "string",
+            "required": false
+          },
+          {
+            "name": "Application",
+            "in": "path",
+            "description": "",
+            "type": "string",
+            "required": true
+          },
+          {
+            "name": "codeProduit",
+            "in": "query",
+            "description": "",
+            "type": "string",
+            "required": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "a getDetailsBeneficiaireResp to be returned",
+            "schema": {
+              "$ref": "#/definitions/getDetailsBeneficiaireResp"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "donneesInput": {
+      "type": "object",
+      "required": [
+        "identifiants",
+        "codeProduit"
+      ],
+      "properties": {
+        "codeProduit": {
+          "type": "string"
+        },
+        "identifiants": {
+          "$ref": "#/definitions/identifiants"
+        }
+      }
+    },
+    "identifiants": {
+      "type": "object",
+      "required": [
+        "codeFinanceur",
+        "codeBeneficiaire"
+      ],
+      "properties": {
+        "codeFinanceur": {
+          "type": "string"
+        },
+        "codeBeneficiaire": {
+          "type": "string"
+        }
+      }
+    },
+    "getDetailsBeneficiaireReq": {
+      "type": "object",
+      "required": [
+        "enteteTechnique"
+      ],
+      "properties": {
+        "enteteTechnique": {
+          "$ref": "#/definitions/enteteTechnique"
+        },
+        "donneesInput": {
+          "$ref": "#/definitions/donneesInput"
+        }
+      }
+    },
+    "donneesOutput": {
+      "type": "object",
+      "properties": {
+        "raisonSociale": {
+          "type": "string"
+        },
+        "informationsBeneficiaire": {
+          "$ref": "#/definitions/informationsBeneficiaire"
+        },
+        "moyensDeCommunication": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/moyensDeCommunication",
+            "uniqueItems": false
+          }
+        },
+        "verouillageBeneficiare": {
+          "type": "boolean"
+        },
+        "BeneficiaireActif": {
+          "type": "boolean"
+        },
+        "numeroCompteMoveUp": {
+          "type": "string"
+        },
+        "IDSiteDistribution": {
+          "type": "string"
+        }
+      }
+    },
+    "moyensDeCommunication": {
+      "type": "object",
+      "properties": {
+        "codePrefix": {
+          "type": "string"
+        },
+        "TypeMoyenDeCommunication": {
+          "type": "string"
+        },
+        "TelephoneFaxMail": {
+          "type": "string"
+        }
+      }
+    },
+    "getDetailsBeneficiaireResp": {
+      "type": "object",
+      "required": [
+        "enteteTechnique"
+      ],
+      "properties": {
+        "enteteTechnique": {
+          "$ref": "#/definitions/enteteTechnique"
+        },
+        "donneesOutput": {
+          "$ref": "#/definitions/donneesOutput"
+        }
+      }
+    },
+    "enteteTechnique": {
+      "type": "object",
+      "required": [
+        "applicationId",
+        "userId"
+      ],
+      "properties": {
+        "userId": {
+          "type": "string"
+        },
+        "applicationId": {
+          "type": "string"
+        }
+      }
+    },
+    "informationsBeneficiaire": {
+      "type": "object",
+      "required": [
+        "nomBeneficiaire",
+        "prenomBeneficiaire",
+        "IDProfil",
+        "civilite"
+      ],
+      "properties": {
+        "numeroFourniBeneficiaire": {
+          "type": "string"
+        },
+        "numeroMatricule": {
+          "type": "string"
+        },
+        "civilite": {
+          "type": "string"
+        },
+        "nomBeneficiaire": {
+          "type": "string"
+        },
+        "prenomBeneficiaire": {
+          "type": "string"
+        },
+        "IDProfil": {
+          "type": "string"
+        },
+        "adresseLigne1": {
+          "type": "string"
+        },
+        "adresseLigne2": {
+          "type": "string"
+        },
+        "adresseLigne3": {
+          "type": "string"
+        },
+        "adresseLigne4": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
